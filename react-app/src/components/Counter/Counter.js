@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ShowName from '../ShowName/ShowName';
 
 class Counter extends Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class Counter extends Component {
             <div>
                 <h2>Counter</h2>
                 <div>{this.state.counter}</div>
+                <ShowName name='Counter' />
                 <div>
                     <button onClick={this.onIncrement.bind(this)}>
                         Increment
