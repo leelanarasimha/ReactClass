@@ -9,6 +9,8 @@ import PropsComponent from './components/PropsComponent/PropsComponent';
 import Addition from './components/PropsComponent/Addition';
 import AdditionClass from './components/PropsComponent/AdditionClass';
 import Products from './components/Products/Products';
+import ProductsClass from './components/Products/ProductsClass';
+import LoginClass from './components/Login/LoginClass';
 
 function App() {
     return (
@@ -24,7 +26,7 @@ function App() {
                 <Addition a='400' b='500' />
                 <AdditionClass a='400' b='500' /> */}
 
-                <Products />
+                <LoginClass />
             </div>
         </div>
     );
