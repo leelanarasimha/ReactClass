@@ -11,6 +11,7 @@ import AdditionClass from './components/PropsComponent/AdditionClass';
 import Products from './components/Products/Products';
 import ProductsClass from './components/Products/ProductsClass';
 import LoginClass from './components/Login/LoginClass';
+import RegistrationFunctions from './components/Registration/RegistrationFunctions';
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <AdditionClass a='400' b='500' /> */}
 
                 <LoginClass />
+                <RegistrationFunctions />
             </div>
         </div>
     );
