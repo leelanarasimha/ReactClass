@@ -20,6 +20,7 @@ const RegistrationFunctions = () => {
 
     return (
         <div>
+        
             <div>Registration Form</div>
             <form onSubmit={onRegister}>
                 <div>
