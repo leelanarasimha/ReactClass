@@ -36,6 +36,7 @@ export default class LifeCycleComponent extends Component {
 
     render() {
         console.log('Render  executed');
+
         return (
             <div>
                 <div>
