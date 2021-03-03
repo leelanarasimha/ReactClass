@@ -14,6 +14,9 @@ import './App.css';
 import LifeCycleComponent from './components/LifeCycleComponent/LifeCycleComponent';
 import { useState } from 'react';
 import LifeCycleFunctions from './components/LifeCycleComponent/LifeCycleFunctions';
+import RegistrationClass from './components/Registration/RegistrationClass';
+import RegistrationUncontrolled from './components/Registration/RegistrationUncontrolled';
+import HttpComponent from './components/HttpComponent/HttpComponent';
 
 function App() {
     const [showComponent, setShowComponent] = useState(false);
@@ -32,11 +35,12 @@ function App() {
 
                 {/* <LoginClass />
                 <RegistrationFunctions /> */}
-
-                <button onClick={() => setShowComponent(!showComponent)}>
+                {/* <RegistrationUncontrolled /> */}
+                {/* <button onClick={() => setShowComponent(!showComponent)}>
                     ShowLife Cycle Component
                 </button>
-                {showComponent && <LifeCycleFunctions name='hai leela' />}
+                {showComponent && <LifeCycleFunctions name='hai leela' />} */}
+                <HttpComponent />
             </div>
         </div>
     );

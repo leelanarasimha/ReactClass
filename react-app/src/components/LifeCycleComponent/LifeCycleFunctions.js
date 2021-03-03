@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 export default function LifeCycleFunctions() {
     const [counter, setCounter] = useState(0);
 
-    console.log('before render');
+    const isMounted = useRef(false);
 
     //Executes on Mounted and updates
     useEffect(() => {
@@ -27,6 +27,15 @@ export default function LifeCycleFunctions() {
             console.log('executes only on unmounted');
         };
     }, []);
+
+    //executes only on updated
+    useEffect(() => {
+        if (isMounted.current) {
+            console.log('executes only on updated');
+        } else {
+            isMounted.current = true;
+        }
+    });
 
     return (
         <div>

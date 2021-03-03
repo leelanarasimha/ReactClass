@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const RegistrationFunctions = () => {
     const [email, setEmail] = useState('asdasd');
@@ -20,7 +20,6 @@ const RegistrationFunctions = () => {
 
     return (
         <div>
-        
             <div>Registration Form</div>
             <form onSubmit={onRegister}>
                 <div>
