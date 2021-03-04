@@ -17,6 +17,7 @@ import LifeCycleFunctions from './components/LifeCycleComponent/LifeCycleFunctio
 import RegistrationClass from './components/Registration/RegistrationClass';
 import RegistrationUncontrolled from './components/Registration/RegistrationUncontrolled';
 import HttpComponent from './components/HttpComponent/HttpComponent';
+import HttpComponentFunctions from './components/HttpComponent/HttpComponentFunctions';
 
 function App() {
     const [showComponent, setShowComponent] = useState(false);
@@ -40,7 +41,8 @@ function App() {
                     ShowLife Cycle Component
                 </button>
                 {showComponent && <LifeCycleFunctions name='hai leela' />} */}
-                <HttpComponent />
+                {/* <HttpComponent /> */}
+                <HttpComponentFunctions />
             </div>
         </div>
     );
