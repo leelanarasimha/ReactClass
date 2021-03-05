@@ -1,7 +1,36 @@
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function PostsList() {
     const [posts, setPosts] = useState(null);
+
+    useEffect(() => {
+        axios
+            .get(
+                `https://react-class-6e078-default-rtdb.firebaseio.com/posts.json`,
+            )
+            .then((response) => {
+                setPosts(response.data);
+            });
+    }, []);
+
+    function getPostsHtml() {
+        let postsHtml = [];
+
+        if (posts) {
+            for (let key in posts) {
+                postsHtml.push(
+                    <tr key={key}>
+                        <td>{key}</td>
+                        <td>{posts[key].title}</td>
+                        <td>{posts[key].description}</td>
+                    </tr>,
+                );
+            }
+        }
+        return postsHtml;
+    }
+
     return (
         <div className='mt-3'>
             {posts ? (
@@ -13,13 +42,7 @@ export default function PostsList() {
                             <th>Description</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>dsds</td>
-                            <td>dsds</td>
-                            <td>dsds</td>
-                        </tr>
-                    </tbody>
+                    <tbody>{getPostsHtml()}</tbody>
                 </table>
             ) : (
                 <div>No Posts Present</div>
