@@ -9,6 +9,10 @@ export default function Posts(props) {
         setShowCreatePost(true);
     }
 
+    function showPosts() {
+        setShowCreatePost(false);
+    }
+
     return (
         <div>
             <h2>Posts List</h2>
@@ -21,9 +25,11 @@ export default function Posts(props) {
                 </button>
             </div>
             <div>
-                {showCreatePost && <CreatePost />}
-
-                <PostsList />
+                {showCreatePost ? (
+                    <CreatePost showposts={showPosts} />
+                ) : (
+                    <PostsList />
+                )}
             </div>
         </div>
     );
