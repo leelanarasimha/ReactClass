@@ -8,8 +8,10 @@ export default function PostsList() {
     const [updatePostDetails, setUpdatePostDetails] = useState([]);
 
     useEffect(() => {
-        getPosts();
-    }, []);
+        if (!updatePost) {
+            getPosts();
+        }
+    }, [updatePost]);
 
     function getPosts() {
         axios
