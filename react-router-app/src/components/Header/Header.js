@@ -1,3 +1,5 @@
+import { Link, NavLink } from 'react-router-dom';
+
 export default function Header() {
     return (
         <nav class='navbar navbar-expand-lg navbar-light bg-light'>
@@ -6,7 +8,7 @@ export default function Header() {
                     React Router
                 </a>
                 <button
-                    class='navbar-toggler'
+                    className='navbar-toggler'
                     type='button'
                     data-bs-toggle='collapse'
                     data-bs-target='#navbarNav'
@@ -19,23 +21,33 @@ export default function Header() {
                 <div class='collapse navbar-collapse' id='navbarNav'>
                     <ul class='navbar-nav'>
                         <li class='nav-item'>
-                            <a
-                                class='nav-link active'
+                            <NavLink
+                                activeClassName='active'
+                                to='/'
+                                exact
+                                className='nav-link '
                                 aria-current='page'
-                                href='/'
                             >
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='/posts'>
+                            <NavLink
+                                activeClassName='active'
+                                className='nav-link'
+                                to='/posts'
+                            >
                                 Posts
-                            </a>
+                            </NavLink>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='/contact'>
+                            <NavLink
+                                activeClassName='active'
+                                className='nav-link'
+                                to='/contact'
+                            >
                                 Contact
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
