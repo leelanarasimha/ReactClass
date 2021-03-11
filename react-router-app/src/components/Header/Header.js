@@ -49,6 +49,15 @@ export default function Header() {
                                 Contact
                             </NavLink>
                         </li>
+                        <li class='nav-item'>
+                            <NavLink
+                                activeClassName='active'
+                                className='nav-link'
+                                to='/users'
+                            >
+                                Users
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>
