@@ -2,10 +2,11 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, Route } from 'react-router-dom';
 import CreateUser from '../CreateUser/CreateUser';
-import { UpdateUser } from '../UpdateUser/UpdateUser';
+import UpdateUser from '../UpdateUser/UpdateUser';
 import './Users.css';
-export function Users() {
+export function Users(props) {
     const [users, setUsers] = useState([]);
+
     useEffect(() => {
         axios
             .get(
@@ -15,7 +16,7 @@ export function Users() {
                 console.log(response.data);
                 setUsers(response.data);
             });
-    }, []);
+    }, [props.match]);
 
     function getUsersHtml() {
         let usersHtml = [];
@@ -64,6 +65,7 @@ export function Users() {
                 <div class='flex-1'>
                     <div class='ml-4'>
                         <Route
+                            onupdate='hai'
                             path='/users/createuser'
                             component={CreateUser}
                         />
