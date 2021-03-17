@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import Posts from './pages/Posts/Posts';
 import NotFound from './pages/NotFound/NotFound';
 import { BrowserRouter } from 'react-router-dom';
+import CreatePost from './pages/CreatePost/CreatePost';
+import UpdatePost from './pages/UpdatePost/UpdatePost';
 
 function App() {
     return (
@@ -12,9 +14,14 @@ function App() {
             <div>
                 <Header />
 
-                <div>
+                <div className='container'>
                     <Switch>
                         <Route path='/posts' component={Posts} />
+                        <Route path='/createpost' component={CreatePost} />
+                        <Route
+                            path='/updatepost/:id'
+                            component={UpdatePost}
+                        />
                         <Route path='/' component={Home} exact />
                         <Route path='*' component={NotFound} />
                     </Switch>
