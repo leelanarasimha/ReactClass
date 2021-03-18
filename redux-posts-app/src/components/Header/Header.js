@@ -31,6 +31,11 @@ export default function Header(props) {
                                     Posts
                                 </Link>
                             </li>
+                            <li class='nav-item'>
+                                <Link class='nav-link' to='/counter'>
+                                    Counter
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

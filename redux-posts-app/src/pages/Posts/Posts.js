@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { connect, useDispatch, useStore } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deletePostsAction } from '../../store/actions/PostsActions';
+import { increment } from '../../store/actions/CounterActions';
 
 function Posts(props) {
     const store = useStore();
     const [posts, setPosts] = useState([]);
+    const [counter, setCounter] = useState('');
 
     const dispatch = useDispatch();
 
@@ -15,7 +17,8 @@ function Posts(props) {
 
     function getPosts() {
         const state = store.getState();
-        setPosts(state.posts);
+        setPosts(state.posts.posts);
+        setCounter(state.counter.counter);
     }
 
     function onDeletePost(postId) {
@@ -28,6 +31,7 @@ function Posts(props) {
     return (
         <div>
             <h2> Posts Page</h2>
+            <div>Counter: {counter}</div>
             <div>
                 <Link to='/createpost'>Create Post</Link>
             </div>
