@@ -9,6 +9,7 @@ import CreatePost from './pages/CreatePost/CreatePost';
 import UpdatePost from './pages/UpdatePost/UpdatePost';
 import Counter from './pages/Counter/Counter';
 import Counterfn from './pages/Counter/Counterfn';
+import SelectorComp from './pages/SelectorComp/SelectorComp';
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                     <Switch>
                         <Route path='/posts' component={Posts} />
                         <Route path='/counter' component={Counterfn} />
+                        <Route path='/selector' component={SelectorComp} />
                         <Route path='/createpost' component={CreatePost} />
                         <Route
                             path='/updatepost/:id'

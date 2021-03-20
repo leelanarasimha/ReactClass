@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { decrement, increment } from '../../store/actions/CounterActions';
+import SelectorComp from '../SelectorComp/SelectorComp';
 
 function Counterfn(props) {
     function onIncrement() {
